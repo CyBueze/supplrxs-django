@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+
+{% block content%}
+    <h1>Search for Drugs</h1>
+
+    <!-- Search form -->
+    <form id="drug-search-form" method="get" action="{% url 'search_drugs' %}">
+        <label for="drug-name"></label>
+        <input type="search" id="drug-name" name="drug_name" placeholder="Search drug name e.g Dexamethasone..." 
+               hx-get="{% url 'search_drugs' %}"
+               hx-target="#drug-results"
+               hx-trigger="keyup changed delay:500ms">  <!-- Trigger on typing -->
+
+        <label for="state"></label>
+        <select id="state" name="state" 
+                hx-get="{% url 'search_drugs' %}"
+                hx-target="#drug-results"
+                hx-trigger="change"
+                style="width:170px;">  
+            <option value="">Select State</option>
+            {% for state in states %}
+                <option value="{{ state.id }}">{{ state.name }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <!-- Where the filtered results will be displayed -->
+    <div id="drug-results">
+        <p>No drugs found. Please start your search.</p>
+    </div>
+
+{% endblock %}

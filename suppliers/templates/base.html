@@ -1,0 +1,39 @@
+<!-- suppliers/templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplrxs | {% block title%}Home{% endblock %}</title>
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>  <!-- Include HTMX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <!-- Load static files -->
+    {% load static %}
+    
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="secondary">...</a></li>
+    </ul>
+    <ul>
+      <li>
+        <a>
+          <img src="{% static "img/supplrxs.png" %}" alt="">
+        
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#" class="secondary">Cont</a></li>
+    </ul>
+  </nav>
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+</body>
+</html>

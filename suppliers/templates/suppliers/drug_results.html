@@ -1,0 +1,11 @@
+<!-- drug_results.html -->
+<ul>
+    {% for drug in drugs %}
+        <li>
+            {{ drug.name }} - {{ drug.supplier.name }} 
+            <a href="https://wa.me/{{ drug.supplier.whatsapp_number }}">Contact Supplier</a>
+        </li>
+    {% empty %}
+        <li>No drugs found</li>
+    {% endfor %}
+</ul>

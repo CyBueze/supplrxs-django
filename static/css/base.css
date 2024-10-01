@@ -1,0 +1,15 @@
+nav img{
+  height: 50px;
+  width: auto;
+}
+
+/* Center the form and its elements */
+#drug-search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#state {
+    width: 170px;
+}

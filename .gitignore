@@ -1,0 +1,15 @@
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore environment variable files
+.env
+
+# Ignore database files
+db.sqlite3
+
+# Ignore temporary files
+*.log
+
+# Do NOT ignore the static folder or its contents
+# (Assuming you want to include static files)

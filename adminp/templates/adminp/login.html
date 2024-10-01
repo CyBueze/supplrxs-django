@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+
+{% block title%} Login {% endblock%}
+
+{% block content%}
+<form>
+  <fieldset>
+    <label>
+      Email
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        autocomplete="email"
+        required
+      />
+    </label>
+    <label>
+      Password
+      <input
+        name="password"
+        type="password"
+        placeholder="Enter password"
+        required
+      />
+    </label>
+  </fieldset>
+
+  <input
+    type="submit"
+    value="Login"
+  />
+</form>
+
+{% endblock %}
